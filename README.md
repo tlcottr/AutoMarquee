@@ -1,5 +1,11 @@
 # Marquee
 
+
+![Build Status](https://github.com/tlcottr/Marquee/actions/workflows/swift.yml/badge.svg)
+![License](https://img.shields.io/github/license/tlcottr/Marquee)
+![Swift Version](https://img.shields.io/badge/Swift-5.7-orange)
+![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey)
+
 A SwiftUI package for creating customizable scrolling marquees in your app.
 
 ## Features
