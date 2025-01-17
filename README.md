@@ -1,4 +1,4 @@
-# MarqueePackage
+# Marquee
 
 A SwiftUI package for creating customizable scrolling marquees in your app.
 
