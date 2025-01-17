@@ -1,7 +1,7 @@
 # Marquee
 
 
-![Build Status](https://github.com/tlcottr/Marquee/actions/workflows/build.yml/badge.svg)
+![Build Status](https://github.com/tlcottr/Marquee/actions/workflows/build.yml)
 ![License](https://img.shields.io/github/license/tlcottr/Marquee)
 ![Swift Version](https://img.shields.io/badge/Swift-5.7-orange)
 ![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey)
