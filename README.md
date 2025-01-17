@@ -18,11 +18,11 @@ A SwiftUI package for creating customizable scrolling marquees in your app.
 
 ## Usage
 ```swift
-import Marquee
+import AutoMarquee
 
 struct ContentView: View {
     var body: some View {
-        Marquee(targetVelocity: 30, direction: .rightToLeft, isDraggable: false) {
+        AutoMarquee(targetVelocity: 30, direction: .rightToLeft, isDraggable: false) {
             Text("Hello World")
         }
     }
