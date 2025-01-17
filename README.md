@@ -15,15 +15,12 @@ A SwiftUI package for creating customizable scrolling marquees in your app.
 
 ## Usage
 ```swift
-import MarqueePackage
+import Marquee
 
 struct ContentView: View {
     var body: some View {
         Marquee(targetVelocity: 30) {
             Text("This is a marquee!")
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(8)
         }
     }
 }
