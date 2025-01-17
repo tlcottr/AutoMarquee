@@ -1,12 +1,11 @@
 import XCTest
 @testable import Marquee
 
-final class MarqueeTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
-
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+final class MarqueeModelTests: XCTestCase {
+    func testOffsetCalculation() {
+        var model = MarqueeModel(targetVelocity: 30, spacing: 10, direction: .rightToLeft)
+        model.contentWidth = 200
+        model.tick(at: Date())
+        XCTAssert(model.offset < 0) // Test some condition
     }
 }
