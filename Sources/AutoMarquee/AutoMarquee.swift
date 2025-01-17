@@ -1,6 +1,6 @@
 //
-//  Marquee.swift
-//  Marquee
+//  AutoMarquee.swift
+//  AutoMarquee
 //
 //  Created by Taylor Cottrell on 1/17/25.
 //
@@ -12,10 +12,10 @@ enum ScrollDirection {
     case rightToLeft
 }
 
-struct Marquee<Content: View>: View {
+struct AutoMarquee<Content: View>: View {
     @ViewBuilder var content: Content
     @State private var containerWidth: CGFloat? = nil
-    @State private var model: MarqueeModel
+    @State private var model: AutoMarqueeModel
     private var targetVelocity: Double
     private var spacing: CGFloat
     private var direction: ScrollDirection
@@ -30,7 +30,7 @@ struct Marquee<Content: View>: View {
         @ViewBuilder content: () -> Content
     ) {
         self.content = content()
-        self._model = .init(wrappedValue: MarqueeModel(targetVelocity: targetVelocity, spacing: spacing, direction: direction))
+        self._model = .init(wrappedValue: AutoMarqueeModel(targetVelocity: targetVelocity, spacing: spacing, direction: direction))
         self.targetVelocity = targetVelocity
         self.spacing = spacing
         self.direction = direction
@@ -78,7 +78,7 @@ struct Marquee<Content: View>: View {
     }
 }
 
-struct MarqueeModel {
+struct AutoMarqueeModel {
     var contentWidth: CGFloat? = nil
     var offset: CGFloat = 0
     var dragStartOffset: CGFloat? = nil

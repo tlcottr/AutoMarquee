@@ -1,9 +1,9 @@
 import XCTest
-@testable import Marquee
+@testable import AutoMarquee
 
-final class MarqueeModelTests: XCTestCase {
+final class AutoMarqueeModelTests: XCTestCase {
     func testOffsetCalculation() {
-        var model = MarqueeModel(targetVelocity: 30, spacing: 10, direction: .rightToLeft)
+        var model = AutoMarqueeModel(targetVelocity: 30, spacing: 10, direction: .rightToLeft)
         model.contentWidth = 200
         model.tick(at: Date())
         XCTAssert(model.offset < 0) // Test some condition
