@@ -19,8 +19,8 @@ import Marquee
 
 struct ContentView: View {
     var body: some View {
-        Marquee(targetVelocity: 30) {
-            Text("This is a marquee!")
+        Marquee(targetVelocity: 30, direction: .rightToLeft, isDraggable: false) {
+            Text("Hello World")
         }
     }
 }
