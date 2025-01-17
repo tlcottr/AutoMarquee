@@ -4,24 +4,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "Marquee",
+    name: "AutoMarquee", // Updated package name
     platforms: [
         .iOS(.v15),
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Marquee",
-            targets: ["Marquee"]),
+            name: "AutoMarquee", // Updated library name
+            targets: ["AutoMarquee"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Marquee"),
+            name: "AutoMarquee"), // Updated target name
         .testTarget(
-            name: "MarqueeTests",
-            dependencies: ["Marquee"]
+            name: "AutoMarqueeTests", // Updated test target name
+            dependencies: ["AutoMarquee"]
         ),
     ]
 )
