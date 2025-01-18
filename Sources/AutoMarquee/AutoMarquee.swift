@@ -12,7 +12,7 @@ public enum ScrollDirection {
     case rightToLeft
 }
 
-public struct ScrollingMarquee<Content: View>: View {
+public struct AutoMarquee<Content: View>: View {
     @ViewBuilder public var content: Content
     @State private var containerWidth: CGFloat? = nil
     @State private var model: MarqueeModel
