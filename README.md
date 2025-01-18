@@ -1,4 +1,4 @@
-# Marquee
+# AutoMarquee
 
 ![Swift Version](https://img.shields.io/badge/Swift-5.7-orange)
 ![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey)
@@ -22,7 +22,7 @@ import AutoMarquee
 
 struct ContentView: View {
     var body: some View {
-        AutoMarquee(targetVelocity: 30, direction: .rightToLeft, isDraggable: false) {
+        ScrollingMarquee(targetVelocity: 30, direction: .rightToLeft, isDraggable: false) {
             Text("Hello World")
         }
     }
