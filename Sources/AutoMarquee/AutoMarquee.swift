@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-enum ScrollDirection {
+public enum ScrollDirection {
     case leftToRight
     case rightToLeft
 }
 
-struct ScrollingMarquee<Content: View>: View {
+public struct ScrollingMarquee<Content: View>: View {
     @ViewBuilder public var content: Content
     @State private var containerWidth: CGFloat? = nil
     @State private var model: MarqueeModel
     private var targetVelocity: Double
     private var spacing: CGFloat
     private var direction: ScrollDirection
-    private var isDraggable: Bool // New property
+    private var isDraggable: Bool
 
 
-    init(
+    public init(
         targetVelocity: Double,
         spacing: CGFloat = 10,
         direction: ScrollDirection = .rightToLeft,
@@ -43,7 +43,7 @@ struct ScrollingMarquee<Content: View>: View {
         return Int(((containerWidth ?? 0) / contentPlusSpacing).rounded(.up))
     }
 
-    var body: some View {
+    public var body: some View {
         TimelineView(.animation) { context in
             HStack(spacing: model.spacing) {
                 HStack(spacing: model.spacing) {
