@@ -13,7 +13,7 @@ enum ScrollDirection {
 }
 
 struct ScrollingMarquee<Content: View>: View {
-    @ViewBuilder var content: Content
+    @ViewBuilder public var content: Content
     @State private var containerWidth: CGFloat? = nil
     @State private var model: MarqueeModel
     private var targetVelocity: Double
