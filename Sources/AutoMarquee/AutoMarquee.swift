@@ -12,10 +12,10 @@ enum ScrollDirection {
     case rightToLeft
 }
 
-struct AutoMarquee<Content: View>: View {
+struct Marquee<Content: View>: View {
     @ViewBuilder var content: Content
     @State private var containerWidth: CGFloat? = nil
-    @State private var model: AutoMarqueeModel
+    @State private var model: MarqueeModel
     private var targetVelocity: Double
     private var spacing: CGFloat
     private var direction: ScrollDirection
@@ -30,7 +30,7 @@ struct AutoMarquee<Content: View>: View {
         @ViewBuilder content: () -> Content
     ) {
         self.content = content()
-        self._model = .init(wrappedValue: AutoMarqueeModel(targetVelocity: targetVelocity, spacing: spacing, direction: direction))
+        self._model = .init(wrappedValue: MarqueeModel(targetVelocity: targetVelocity, spacing: spacing, direction: direction))
         self.targetVelocity = targetVelocity
         self.spacing = spacing
         self.direction = direction
@@ -78,7 +78,7 @@ struct AutoMarquee<Content: View>: View {
     }
 }
 
-struct AutoMarqueeModel {
+struct MarqueeModel {
     var contentWidth: CGFloat? = nil
     var offset: CGFloat = 0
     var dragStartOffset: CGFloat? = nil
